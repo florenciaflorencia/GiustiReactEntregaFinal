@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Comision 34780</title>
+        <style>
+            picture {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: 100px;
+                margin-bottom: 10px;
+            }
+            img {
+                border-radius: 50%;
+                box-shadow: 0 0 15px #555;
+                margin-bottom: 10px;
+            }
+            .disabled {
+                opacity: 0;
+            }
+        </style>
+        <script
+            crossorigin
+            src="https://unpkg.com/react@17/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <!-- <picture>
+            <img id="avatar" src="https://randomuser.me/api/portraits/lego/1.jpg"/>
+            Seba
+        </picture> -->
+        <div id="root"></div>
+        <script type="text/babel">
+            // const imagen = document.getElementById('avatar')
+
+            // imagen.addEventListener('click', () => {
+            //     imagen.classList.toggle('disabled')
+            // })
+
+            // const root = document.getElementById('root')
+
+            // const avatar = (params) => {
+            //     const src = `https://randomuser.me/api/portraits/lego/${params.id}.jpg`
+
+            //     return `
+            //         <picture>
+            //             <img id="avatar" src="${src}"/>
+            //             ${params.name}
+            //         </picture>
+            //     `
+            // }
+
+            // root.innerHTML = avatar({ id: 1, name: 'Seba' })
+            // root.innerHTML += avatar({ id: 2, name: 'Facundo'})
+       
+            const root = document.getElementById('root')
+
+            const r = React.createElement
+
+            const Avatar = () => {
+                const src = `https://randomuser.me/api/portraits/lego/1.jpg`
+
+                return r('picture', {}, [r('img', { src }), 'Seba'])
+            }
+
+            const AvatarJsx = () => {
+                const src = `https://randomuser.me/api/portraits/lego/2.jpg`
+
+                return (
+                    <picture>
+                        <img src={src}/>
+                        Andres
+                    </picture>
+                )
+            }
+
+            ReactDOM.render(r(AvatarJsx), root)
+       </script>
+
+    </body>
+</html>

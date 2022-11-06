@@ -1,0 +1,12 @@
+.conteinerLista {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top:20px;
+
+}
+
+
+
